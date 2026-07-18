@@ -39,7 +39,7 @@ const Nav = () => {
               {theme ? "☀️" : "🌙"}
             </button>
             <Show when="signed-out">
-              <SignInButton>
+              <SignInButton forceRedirectUrl="/chat">
                 <button
                   onClick={() => router.push("/auth/sign_up")}
                   className={` cursor-pointer text-sm font-semibold px-4 py-2 rounded-xl transition-all ${theme ? "text-slate-300 hover:text-white" : "text-[#004AC6] hover:bg-blue-50"}`}
@@ -48,7 +48,7 @@ const Nav = () => {
                 </button>
               </SignInButton>
 
-              <SignUpButton>
+              <SignUpButton forceRedirectUrl="/chat">
                 <button
                   // onClick={() => router.push("/auth/sign_in")}
                   className={` cursor-pointer text-sm font-semibold px-5 py-2 rounded-xl shadow-md transition-all active:scale-95 flex items-center gap-1.5 ${theme ? "bg-[#2563EB] text-white hover:bg-blue-600 shadow-blue-900/20" : "bg-[#004AC6] text-white hover:bg-blue-800 shadow-blue-200/50"}`}
